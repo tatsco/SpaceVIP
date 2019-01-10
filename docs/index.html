@@ -8,58 +8,6 @@
   </head>
   <body>
     <a-scene>
-
-        <a-assets>
-          <!-- image assets -->
-          <img id="boxTexture" src="images/myimage.jpg">
-          <img id="skyTexture" src="images/space360.jpg">
-          <img id="earth" src="images/earth.jpg">
-          <!-- video assets -->
-          <video id="welcomeToSpace" autoplay loop="true" src="videos/spaceVIPVideoMessage.mov"></video>
-          <video id="michaelJackson" autoplay loop="true" src="videos/michaelJackson.mp4"> </video>
-        </a-assets>
-
-        <!-- sphere entities -->
-        <a-sphere src="#earth" position="-9 3 0">
-          <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite">
-          </a-animation>
-        </a-sphere>
-
-        <!-- box entities -->
-        <!-- <a-box src="#earth" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
-            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
-            repeat="indefinite"></a-animation>
-        </a-box> -->
-
-        <!-- sky 360 background-->
-        <a-sky src="#skyTexture"></a-sky>
-
-        <!-- text entity-->
-        <a-text value="VR Space Club Experience" color="red" position="0 3.5 -3" align="center"></a-text>
-
-        <!-- video entities with animation -->
-        <a-video src="#welcomeToSpace" width="20" height="18" position="0 3 -20">
-          <a-animation attribute="position" to="0 4 -20" direction="alternate" dur="2000" repeat="indefinite">
-          </a-animation>
-        </a-video>
-        <a-video src="#michaelJackson" position="0 15 50" height="25" width="25">
-          <a-animation attribute="position" to="0 5 50" direction="alternate" dur="2000" repeat="indefinite">
-          </a-animation>
-        </a-video>
-    </a-scene>
-  </body>
-</html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome To Space VIP Club!</title>
-    <meta name="description" content="Exploring A-Frame Framework">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-
         <a-assets>
           <!-- image assets -->
           <img id="boxTexture" src="../images/myimage.jpg">
