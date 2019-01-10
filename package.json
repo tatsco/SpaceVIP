@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tatsco/SpaceVIP/issues"
   },
-  "homepage": "https://github.com/tatsco/SpaceVIP#readme"
+  "homepage": "https://github.com/tatsco/SpaceVIP#readme",
+  "dependencies": {
+    "aframe": "^0.8.2"
+  }
 }
