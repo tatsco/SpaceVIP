@@ -8,19 +8,23 @@
 
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
 
   </head>
   <body>
     <a-scene>
-        <a-assets>
+        <a-assets timeout="5000">
           <!-- image assets -->
           <img id="boxTexture" src="../images/myimage.jpg">
           <img id="skyTexture" src="../images/space360.jpg">
           <img id="earth" src="../images/earth.jpg">
           <!-- video assets -->
-          <video id="welcomeToSpace" src="../videos/spaceVIPVideoMessage.mov" preload="auto"></video>
-          <video id="michaelJackson"  src="../videos/michaelJackson.mp4" preload="auto"> </video>
+          <video id="welcomeToSpace" src="../videos/spaceVIPVideoMessage.mov" preload="auto" playsinline webkit-playsinline></video>
+          <video id="michaelJackson"  src="../videos/michaelJackson.mp4" preload="auto" playsinline webkit-playsinline> </video>
         </a-assets>
+
+        <a-entity video-controls="src:#welcomeToSpace"></a-entity>
+        <a-entity video-controls="src:#michaelJackson"></a-entity>
 
         <!-- sphere entities -->
         <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true; to: 0 360 0">
