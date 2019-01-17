@@ -5,15 +5,13 @@
     <title>Welcome To Space VIP Club!</title>
     <meta name="description" content="Exploring A-Frame Framework">
     <meta name="apple-mobile-web-app-capable" content="yes">
-
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
-
   </head>
   <body>
     <a-scene>
-        <a-assets timeout="5000">
+        <a-assets timeout="2000">
           <!-- image assets -->
           <img id="boxTexture" src="assets/images/myimage.jpg">
           <img id="skyTexture" src="assets/images/space360.jpg">
@@ -30,6 +28,11 @@
         <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true; to: 0 360 0">
         </a-sphere>
 
+        <!-- torus-knot entities -->
+        <a-torus-knot id="welcomeTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 0 -70"radius-tubular="0.1" animation="property: position; to: 0 4 -50; dir: alternate; dur: 3000;loop: true"></a-torus-knot>
+        <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 100"radius-tubular="0.1" animation ="property: position; to: 0 10 120; dir: alternate; dur: 3000; loop: true"></a-torus-knot>
+
+
         <!-- box entities -->
         <!-- <a-box src="#earth" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
             <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
@@ -43,12 +46,11 @@
         <a-text value="VR Space Club Experience" color="red" position="0 3.5 -3" align="center"></a-text>
 
         <!-- video entities with animation -->
-        <a-video src="#welcomeToSpace" width="20" height="18" position="0 3 -20" animation="property: position; to: 0 4 -20; dir: alternate; dur: 3000;loop: true">
+        <a-video src="#welcomeToSpace" width="20" height="18" position="0 3 -20" animation="property: position; to: 0 4 -40; dir: alternate; dur: 3000;loop: true">
         </a-video>
-        <a-video src="#michaelJackson" position="0 15 50" height="25" width="25" animation ="property: position; to: 0 5 50; dir: alternate; dur: 3000; loop: true">
+        <a-video src="#michaelJackson" position="0 9 60" height="25" width="25" animation ="property: position; to: 0 8 50; dir: alternate; dur: 3000; loop: true">
         </a-video>
     </a-scene>
   </body>
 </html>
-<!-- <video id="welcomeToSpace" autoplay loop="true" src="/videos/spaceVIPVideoMessage.mov"></video>
-          <video id="michaelJackson" autoplay loop="true" src="/videos/michaelJackson.mp4"> </video> -->
+
