@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome To Space VIP Club!</title>
-    <meta name="description" content="Exploring A-Frame Framework">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
@@ -46,9 +45,9 @@
         <a-text value="VR Space Club Experience" color="red" position="0 3.5 -3" align="center"></a-text>
 
         <!-- video entities with animation -->
-        <a-video src="#welcomeToSpace" width="20" height="18" position="0 3 -20" animation="property: position; to: 0 4 -40; dir: alternate; dur: 3000;loop: true">
+        <a-video src="#welcomeToSpace" width="20" height="18" position="0 3 -20" webkit-playsinline playsinline animation="property: position; to: 0 4 -40; dir: alternate; dur: 3000;loop: true">
         </a-video>
-        <a-video src="#michaelJackson" position="0 9 60" height="25" width="25" animation ="property: position; to: 0 8 50; dir: alternate; dur: 3000; loop: true">
+        <a-video src="#michaelJackson" position="0 9 60" height="25" width="25" webkit-playsinline playsinline animation ="property: position; to: 0 8 50; dir: alternate; dur: 3000; loop: true">
         </a-video>
     </a-scene>
   </body>
