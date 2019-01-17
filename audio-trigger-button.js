@@ -1,8 +1,8 @@
-var button = document.getElementById('audio-trigger-button');
-var testVideoOne = document.getElementById('welcomeToSpace');
-var testVideoTwo = document.getElementById('michaelJackson')
+let button = document.getElementById('audio-trigger-button');
+let testVideoOne = document.getElementById('welcomeToSpace');
+let testVideoTwo = document.getElementById('michaelJackson')
 
-button.onclick = function() {
+button.onClick = function() {
   console.log('button clicked');
   testVideoOne.play();
   testVideoTwo.play();

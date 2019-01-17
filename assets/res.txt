@@ -1,3 +1,8 @@
 Photoshop online: https://www.photopea.com/
 Color: http://paletton.com/#uid=13x0u0k5QvWieQUdzGc2XrH0Xnm
 
+   <!-- box entities -->
+        <!-- <a-box src="#earth" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+            repeat="indefinite"></a-animation>
+        </a-box> -->

@@ -9,7 +9,19 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
-    <script src="audio-trigger-button.js"></script>
+    <script src="dist/iphone-inline-video.min.js"></script>
+    <script>
+       var video1 = document.querySelector('welcomeToSpace');
+       var video2 = document.querySelector('michaelJackson');
+        enableInlineVideo(video1);
+        enableInlineVideo(video2);
+        video1.addEventListener('touchstart', function () {
+	      video1.play();
+        });
+        video1.addEventListener('touchstart', function () {
+	      video1.play();
+    </script>
+    <!-- <script src="audio-trigger-button.js"></script> -->
 
   </head>
 
@@ -28,7 +40,7 @@
 
         <a-entity video-controls="src:#welcomeToSpace"></a-entity>
         <a-entity video-controls="src:#michaelJackson"></a-entity>
-        <a-entity id="audio-trigger-button" geometry="primitive: box" material="color: red" position="0 0 -2"></a-entity>
+        <!-- <a-entity id="audio-trigger-button" geometry="primitive: box" material="color: red" position="0 0 -2"></a-entity> -->
 
         <!-- sphere entities -->
         <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true; to: 0 360 0" >
@@ -52,15 +64,4 @@
     </a-scene>
 
   </body>
-
 </html>
-
-
-
-
-   <!-- box entities -->
-        <!-- <a-box src="#earth" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
-            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
-            repeat="indefinite"></a-animation>
-        </a-box> -->
-
