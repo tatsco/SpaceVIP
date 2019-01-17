@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>Welcome To Space VIP Club!</title>
+    <meta name="" decription="">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+    <sript src="audio-trigger-button.js"></sript>
   </head>
+
   <body>
     <a-scene>
+
         <a-assets timeout="2000">
           <!-- image assets -->
           <img id="boxTexture" src="assets/images/myimage.jpg">
           <img id="skyTexture" src="assets/images/space360.jpg">
           <img id="earth" src="assets/images/earth.jpg">
           <!-- video assets -->
-          <video id="welcomeToSpace" src="assets/videos/spaceVIPVideoMessage.mov" preload="auto" playsinline webkit-playsinline></video>
-          <video id="michaelJackson"  src="assets/videos/michaelJackson.mp4" preload="auto" playsinline webkit-playsinline> </video>
+          <video id="welcomeToSpace" src="assets/videos/spaceVIPVideoMessage.mov" muted></video>
+          <video id="michaelJackson"  src="assets/videos/michaelJackson.mp4" muted></video>
         </a-assets>
 
         <a-entity video-controls="src:#welcomeToSpace"></a-entity>
         <a-entity video-controls="src:#michaelJackson"></a-entity>
+        <a-entity id="audio-trigger-button" geometry="primitive: box" material="color: red" position="0 0 -2"></a-entity>
 
         <!-- sphere entities -->
         <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true; to: 0 360 0" >
@@ -30,13 +36,6 @@
         <!-- torus-knot entities -->
         <a-torus-knot id="welcomeTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 0 -70"radius-tubular="0.1" animation="property: position; to: 0 4 -50; dir: alternate; dur: 3000;loop: true"></a-torus-knot>
         <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 100"radius-tubular="0.1" animation ="property: position; to: 0 10 120; dir: alternate; dur: 3000; loop: true"></a-torus-knot>
-
-
-        <!-- box entities -->
-        <!-- <a-box src="#earth" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
-            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
-            repeat="indefinite"></a-animation>
-        </a-box> -->
 
         <!-- sky 360 background-->
         <a-sky src="#skyTexture"></a-sky>
@@ -51,5 +50,15 @@
         </a-video>
     </a-scene>
   </body>
+
 </html>
+
+
+
+
+   <!-- box entities -->
+        <!-- <a-box src="#earth" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+            repeat="indefinite"></a-animation>
+        </a-box> -->
 
