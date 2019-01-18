@@ -13,38 +13,42 @@
 
   <body>
     <a-scene>
-        <a-assets timeout="2000">
-          <!-- image assets -->
-          <img id="boxTexture" src="assets/images/myimage.jpg">
-          <img id="skyTexture" src="assets/images/space360.jpg">
-          <img id="earth" src="assets/images/earth.jpg">
-          <!-- video assets -->
-          <video id="welcomeToSpace" src="assets/videos/spaceVIPVideoMessage.mov"></video>
-          <video id="michaelJackson"  src="assets/videos/michaelJackson.mp4"></video>
-        </a-assets>
-        <a-entity video-controls="src:#welcomeToSpace"></a-entity>
-        <a-entity video-controls="src:#michaelJackson"></a-entity>
 
-        <!-- sphere entities -->
-        <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true; to: 0 360 0" >
-        </a-sphere>
+      <a-camera></a-camera>
+      <a-assets timeout="2000">
+        <!-- image assets -->
+        <img id="boxTexture" src="assets/images/myimage.jpg">
+        <img id="skyTexture" src="assets/images/space360.jpg">
+        <img id="earth" src="assets/images/earth.jpg">
+        <!-- video assets -->
+        <video id="welcomeToSpace" src="assets/videos/spaceVIPVideoMessage.mov"></video>
+        <video id="michaelJackson"  src="assets/videos/michaelJackson.mp4"></video>
+      </a-assets>
 
-        <!-- torus-knot entities -->
-        <a-torus-knot id="welcomeTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 0 -70"radius-tubular="0.1" animation="property: position; to: 0 4 -50; dir: alternate; dur: 3000;loop: true"></a-torus-knot>
-        <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 100"radius-tubular="0.1" animation ="property: position; to: 0 10 120; dir: alternate; dur: 3000; loop: true"></a-torus-knot>
+      <a-entity video-controls="src:#welcomeToSpace"></a-entity>
+      <a-entity video-controls="src:#michaelJackson"></a-entity>
 
-        <!-- sky 360 background-->
-        <a-sky src="#skyTexture"></a-sky>
+      <!-- sphere entities -->
+      <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true; to: 0 360 0" >
+      </a-sphere>
 
-        <!-- text entity-->
-        <a-text value="VR Space Club Experience" color="red" position="0 3.5 -3" align="center"></a-text>
+      <!-- torus-knot entities -->
+      <a-torus-knot id="welcomeTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 0 -70"radius-tubular="0.1" animation="property: position; to: 0 4 -50; dir: alternate; dur: 3000;loop: true"></a-torus-knot>
+      <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 100"radius-tubular="0.1" animation ="property: position; to: 0 10 120; dir: alternate; dur: 3000; loop: true"></a-torus-knot>
 
-        <!-- video entities with animation -->
-        <a-video autoplay src="#welcomeToSpace" width="20" height="18" position="0 3 -20" webkit-playsinline playsinline animation="property: position; to: 0 4 -40; dir: alternate; dur: 3000;loop: true">
-        </a-video>
-        <a-video autoplay src="#michaelJackson" position="0 9 60" height="25" width="25" webkit-playsinline playsinline animation ="property: position; to: 0 8 50; dir: alternate; dur: 3000; loop: true">
-        </a-video>
+      <!-- sky 360 background-->
+      <a-sky src="#skyTexture"></a-sky>
+
+      <!-- text entity-->
+      <a-text value="VR Space Club Experience" color="red" position="0 3.5 -3" align="center"></a-text>
+
+      <!-- video entities with animation -->
+      <a-video autoplay src="#welcomeToSpace" width="20" height="18" position="0 3 -20" webkit-playsinline playsinline animation="property: position; to: 0 4 -40; dir: alternate; dur: 3000;loop: true">
+      </a-video>
+      <a-video autoplay src="#michaelJackson" position="0 9 60" height="25" width="25" webkit-playsinline playsinline animation ="property: position; to: 0 8 50; dir: alternate; dur: 3000; loop: true">
+      </a-video>
     </a-scene>
 
   </body>
+
 </html>
