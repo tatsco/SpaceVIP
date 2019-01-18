@@ -8,7 +8,7 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
-    <script src="dist/iphone-inline-video.min.js"></script>
+
   </head>
 
   <body>
@@ -21,6 +21,9 @@
         <!-- video assets -->
         <video id="welcomeToSpace" src="assets/videos/spaceVIPVideoMessage.mov"></video>
         <video id="michaelJackson"  src="assets/videos/michaelJackson.mp4"></video>
+        <!-- 3D Objects -->
+        <a-asset-item id="r2d2-obj" src="assets/r2d2/r2-d2.obj"></a-asset-item>
+        <a-asset-item id="r2d2-mtl" src="assets/r2d2/r2-d2.mtl"></a-asset-item>
       </a-assets>
 
       <a-entity video-controls="src:#welcomeToSpace"></a-entity>
@@ -39,6 +42,7 @@
 
       <!-- text entity-->
       <a-text value="VR Space Club Experience" color="red" position="0 3.5 -3" align="center"></a-text>
+      <a-text value="Click the space bar to begin and pause music" color="white" position="0 0.5  -3" align="center" height="2" width="2"  ></a-text>
 
       <!-- video entities with animation -->
       <a-video autoplay src="#welcomeToSpace" width="20" height="18" position="0 3 -20" webkit-playsinline playsinline animation="property: position; to: 0 4 -40; dir: alternate; dur: 3000;loop: true">
@@ -46,7 +50,11 @@
       <a-video autoplay src="#michaelJackson" position="0 9 60" height="25" width="25" webkit-playsinline playsinline animation ="property: position; to: 0 8 50; dir: alternate; dur: 3000; loop: true">
       </a-video>
 
-      <iframe src="https://clara.io/embed/1571df52-a48a-45a9-aeb3-9b2197a90fd6?renderer=webgl" width="800" height="600" allowfullscreen position="0 0"></iframe>
+      <!-- Obj model -->
+
+      <a-obj-model src="#r2d2-obj" mtl="#r2d2-mtl" position="6 0 -1" scale="0.02 0.02 -0.02" rotation="0 90 0"></a-obj-model>
+
+
     </a-scene>
 
   </body>
