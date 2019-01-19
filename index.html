@@ -8,21 +8,18 @@
     <meta name="mobile-web-app-cabable">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script>
   </head>
 
   <body>
 
     <a-scene>
-
       <a-assets timeout="2000">
         <!-- image assets -->
-        <img id="welcomeTexture" src="assets/images/SpaceVIPWelcomeBanner.png">
-        <img id="skyTexture" src="assets/images/space360.jpg">
-        <img id="earth" src="assets/images/earth.jpg">
+        <img id="welcomeTexture" src="assets/images/SpaceVIPWelcomeBanner.png" crossorigin="anonymous">
+        <img id="skyTexture" src="assets/images/space360.jpg" crossorigin="anonymous">
+        <img id="earth" src="assets/images/earth.jpg" crossorigin="anonymous">
         <!-- video assets -->
-        <video autoplay id="michaelJackson"  src="assets/videos/michaelJackson.mp4" webkit-playsinline playsinline></video>
+        <video autoplay id="michaelJackson"  src="assets/videos/michaelJackson.mp4" webkit-playsinline playsinline crossorigin="anonymous"></video>
         <!-- 3D Objects -->
         <!-- r2d2 -->
         <a-asset-item id="r2d2-obj" src="assets/r2d2/r2-d2.obj"></a-asset-item>
@@ -35,6 +32,8 @@
         <!-- space girl -->
         <a-asset-item id="spaceGirl-obj" src="assets/spaceGirl/spaceGirl.obj"></a-asset-item>
         <a-asset-item id="spaceGirl-mtl" src="assets/spaceGirl/spaceGirl.mtl"></a-asset-item>
+        <!-- gunbot -->
+
       </a-assets>
 
        <!-- sky 360 background-->
