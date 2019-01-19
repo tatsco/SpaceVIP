@@ -8,7 +8,6 @@
     <meta name="mobile-web-app-cabable">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
-    <!-- <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script> -->
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script>
   </head>
@@ -23,7 +22,7 @@
         <img id="skyTexture" src="assets/images/space360.jpg">
         <img id="earth" src="assets/images/earth.jpg">
         <!-- video assets -->
-        <video id="michaelJackson"  src="assets/videos/michaelJackson.mp4"></video>
+        <video autoplay id="michaelJackson"  src="assets/videos/michaelJackson.mp4" webkit-playsinline playsinline></video>
         <!-- 3D Objects -->
         <!-- r2d2 -->
         <a-asset-item id="r2d2-obj" src="assets/r2d2/r2-d2.obj"></a-asset-item>
@@ -32,43 +31,41 @@
         <a-asset-item id="final-robot-w-moves-gltf" src="assets/robot/final-robot-w-moves.gltf"></a-asset-item>
       </a-assets>
 
-      <!-- <a-entity video-controls="src:#welcomeToSpace"></a-entity>
-      <a-entity video-controls="src:#michaelJackson"></a-entity> -->
+       <!-- sky 360 background-->
+       <a-sky src="#skyTexture"></a-sky>
 
-      <a-image src="#welcomeTexture" position="0 5 -6" height="2" width="10" animation="property:position; to: 0 2 -1000; dir: alternate; dur: 3000; startEvents:click; loop:false"></a-image>
+       <!-- camera/cursor -->
+      <a-camera>
+        <a-cursor color="red" position="0 0 -1"></a-cursor>
+      </a-camera>
+
+      <!-- welcome banner -->
+      <a-image src="#welcomeTexture" position="0 5 -6" height="2" width="10"
+      animation= "property:position; to: 0 2 -1000; dir: alternate; dur: 3000; startEvents:click; loop:false">
+      </a-image>
 
       <!-- sphere entities -->
       <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true; to: 0 360 0" ></a-sphere>
 
       <a-sphere position="-3 0 0" animation="property:position; to: -3 1 0; dir: alternate; dur: 3000; startEvents:click; repeat:indefinite" ></a-sphere>
 
-
-      <a-camera>
-        <a-cursor color="red" position="0 0 -1"></a-cursor>
-      </a-camera>
-
       <!-- torus-knot entities -->
       <a-torus-knot id="welcomeTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 0 -100"radius-tubular="0.1" animation="property: position; to: 0 4 -50; dir: alternate; dur: 3000;loop: true"></a-torus-knot>
-      <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 100"radius-tubular="0.1" animation ="property: position; to: 0 10 120; dir: alternate; dur: 3000; loop: true"></a-torus-knot>
-
-      <!-- sky 360 background-->
-      <a-sky src="#skyTexture"></a-sky>
-
-      <!-- text entity-->
-      <!-- <a-text value="WELCOME TO SPACE VIP CLUB" color="red" position="0 3.5 -10" align="center"></a-text> -->
+      <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 200"radius-tubular="0.1" animation ="property: position; to: 0 10 220; dir: alternate; dur: 3000; loop: true"></a-torus-knot>
 
 
       <!-- video entities with animation -->
-
-      <a-video autoplay src="#michaelJackson" position="0 9 60" height="25" width="25" webkit-playsinline playsinline animation ="property: position; to: 0 8 50; dir: alternate; dur: 3000; loop: true">
+      <a-video  src="#michaelJackson" position="0 9 100" height="25" width="25"
+      animation ="property: position; to: 0 8 90; dir: alternate; dur: 3000; loop: true">
       </a-video>
 
       <!-- Obj model -->
-
-      <a-obj-model src="#r2d2-obj" mtl="#r2d2-mtl" position="6 0 -1" scale="0.02 0.02 -0.02" rotation="0 90 0"></a-obj-model>
-      <a-obj-model gltf-model="#final-robot-w-moves-gltf" scale="0.02 0.02 -0.02" position="0 0 -10" rotation="0 180 0" animation="property:position; to: 0 0 100; dir: alternate; dur: 3000; startEvents:click; loop:false"></a-obj-model>
-
-
+      <a-obj-model src="#r2d2-obj" mtl="#r2d2-mtl" position="6 0 -1" scale="0.02 0.02 -0.02" rotation="0 90 0"
+      animation="property: rotation; to: 0 450 0; dir: alternate; dur: 3000;loop: false; startEvents: click">
+      </a-obj-model>
+      <a-obj-model gltf-model="#final-robot-w-moves-gltf" scale="0.02 0.02 -0.02" position="0 0 -10" rotation="0 180 0"
+      animation="property:position; to: 0 0 100; dir: alternate; dur: 3000; startEvents:click; loop:false">
+      </a-obj-model>
     </a-scene>
   </body>
 </html>
