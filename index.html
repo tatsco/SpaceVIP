@@ -19,7 +19,7 @@
         <img id="skyTexture" src="assets/images/space360.jpg" crossorigin="anonymous">
         <img id="earth" src="assets/images/earth.jpg" crossorigin="anonymous">
         <!-- video assets -->
-        <video autoplay id="michaelJackson"  src="assets/videos/michaelJackson.mp4" webkit-playsinline playsinline crossorigin="anonymous"></video>
+        <video autoplay id="video"  src="assets/videos/michaelJackson.mp4" webkit-playsinline playsinline crossorigin="anonymous" autoplay></video>
         <!-- 3D Objects -->
         <!-- r2d2 -->
         <a-asset-item id="r2d2-obj" src="assets/r2d2/r2-d2.obj"></a-asset-item>
@@ -58,9 +58,15 @@
 
 
       <!-- video entities with animation -->
-      <a-video  src="#michaelJackson" position="0 9 100" height="25" width="25"
-      animation ="property: position; to: 0 8 90; dir: alternate; dur: 3000; loop: true">
+      <a-video  src="#video" position="0 2 20"
+      animation ="property: position; to: 0 3 30; dir: alternate; dur: 3000; loop: true"
+      geometry="mergeTo:null; primitive:circle; radius:3.0;">
       </a-video>
+      <!-- <a-video
+         material="shader:flat; side:double; transparent:true;"
+         >
+      </a-video> -->
+
 
       <!-- Obj model -->
       <!-- r2d2 -->
@@ -84,6 +90,9 @@
       >
       </a-obj-model>
 
+
     </a-scene>
   </body>
+  <script> window.addEventListener('click', function () {  var v = document.querySelector('#video');  v.play(); }); </script>
+
 </html>
