@@ -18,9 +18,12 @@ Mobile: To navigate the scene, use finger to move screen to the direction of int
 Headset: Click the headset icon on the bottom right. To navigate the scene, move head in the direction of interest. To interact with elements, hover over and align elements with the red disc and wait.
 
 # Screenshots
-![Alt text](/assets/images/spaceVIPMoon.png "3D Moon")
 ![Alt text](/assets/images/spaceVIPPage.png "Opening View")
+<<<<<<< HEAD
 
 
+=======
+![Alt text](/assets/images/spaceVIPMoon.png "3D Moon")
+>>>>>>> refs/remotes/origin/master
 
 
