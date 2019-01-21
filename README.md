@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SpaceVIP : A VR Experience On The Moon
 > Fullstack Academy Stackathon Project
 
@@ -19,17 +18,7 @@ Mobile: To navigate the scene, use finger to move screen to the direction of int
 Headset: Click the headset icon on the bottom right. To navigate the scene, move head in the direction of interest. To interact with elements, hover over and align elements with the red disc and wait.
 
 # Screenshots
-![Alt text](/assets/images/spaceVIPMoon.png "3D Moon")
 ![Alt text](/assets/images/spaceVIPPage.png "Opening View")
-
-=======
-# SpaceVIP
-
-> Project Name: Space VIP: A VR Experience on the Moon
-
-> Goal: As part of a Fullstack Academy Stackathon, I learned how to use A-Frame to create a basic Virtual Reality experience.
-
-> Inspiration: Inspired by my love for Second Life Virtual Reality scenes.
->>>>>>> 7119660e2497e043545808b3919e720456ec6f58
+![Alt text](/assets/images/spaceVIPMoon.png "3D Moon")
 
 
