@@ -8,18 +8,20 @@
     <meta name="mobile-web-app-cabable">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.9/dist/aframe-particle-system-component.min.js"></script>
   </head>
 
   <body>
-
     <a-scene>
       <a-assets timeout="2000">
         <!-- image assets -->
         <img id="welcomeTexture" src="assets/images/SpaceVIPWelcomeBanner.png" crossorigin="anonymous">
         <img id="skyTexture" src="assets/images/space360.jpg" crossorigin="anonymous">
         <img id="earth" src="assets/images/earth.jpg" crossorigin="anonymous">
+        <img id="yellow-star" src="assets/images/yellowStars.png">
+        <img id="red-star" src="assets/images/redStars.png">
         <!-- video assets -->
-        <video autoplay id="video"  src="assets/videos/michaelJackson.mp4" webkit-playsinline playsinline crossorigin="anonymous" autoplay></video>
+        <video autoplay id="video"  src="assets/videos/michaelJackson.mp4" webkit-playsinline playsinline crossorigin="anonymous"></video>
         <!-- 3D Objects -->
         <!-- r2d2 -->
         <a-asset-item id="r2d2-obj" src="assets/r2d2/r2-d2.obj"></a-asset-item>
@@ -32,42 +34,34 @@
         <!-- space girl -->
         <a-asset-item id="spaceGirl-obj" src="assets/spaceGirl/spaceGirl.obj"></a-asset-item>
         <a-asset-item id="spaceGirl-mtl" src="assets/spaceGirl/spaceGirl.mtl"></a-asset-item>
-        <!-- gunbot -->
-
       </a-assets>
 
        <!-- sky 360 background-->
        <a-sky src="#skyTexture"></a-sky>
-
        <!-- camera/cursor -->
       <a-camera>
         <a-cursor color="red" position="0 0 -1"></a-cursor>
       </a-camera>
-
       <!-- welcome banner -->
       <a-image src="#welcomeTexture" position="0 5 -6" height="3.5" width="10"
-      animation= "property:position; to: 0 2 -1000; dir: alternate; dur: 3000; startEvents:click; loop:false">
+      animation= "property:position; to: 0 6 -6; dir: alternate; dur: 3000; loop:true">
       </a-image>
-
       <!-- sphere entities -->
-      <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true;from: 0 0 0; to: 0 360 0; startEvents:click" ></a-sphere>
-
+      <a-sphere src="#earth" position="-9 3 0" animation="property: rotation; dur: 10000; loop: true;from: 0 0 0; to: 0 360 0; startEvents:click"></a-sphere>
       <!-- torus-knot entities -->
-      <a-torus-knot id="welcomeTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 0 -100"radius-tubular="0.1" animation="property: position; to: 0 4 -50; dir: alternate; dur: 3000;loop: true"></a-torus-knot>
-      <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 200"radius-tubular="0.1" animation ="property: position; to: 0 10 220; dir: alternate; dur: 3000; loop: true"></a-torus-knot>
-
-
+      <a-torus-knot id="welcomeTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 0 -100"radius-tubular="0.1"
+      animation="property: position; to: 0 4 -50; dir: alternate; dur: 3000;loop: true">
+      </a-torus-knot>
+      <a-torus-knot id="michaelTorusKnot" color="#8898A4" arc="180" p="2" q="7" radius="40" position="0 15 200"radius-tubular="0.1"
+      animation ="property: position; to: 0 10 220; dir: alternate; dur: 3000; loop: true">
+      </a-torus-knot>
+      <!-- star shooters -->
+      <a-cone src="#yellow-star" radius="2" position="-4 0 9"  particle-system="preset: default; color:#cc9c37; particleCount: 500" > </a-cone>
+      <a-cone src="#red-star" radius="2" position="4 0 9"  particle-system="preset: default; color:#d32802; particleCount: 500" ></a-cone>
       <!-- video entities with animation -->
       <a-video  src="#video" position="0 2 20"
-      animation ="property: position; to: 0 3 30; dir: alternate; dur: 3000; loop: true"
-      geometry="mergeTo:null; primitive:circle; radius:3.0;">
+      animation ="property: position; to: 0 3 30; dir: alternate; dur: 3000; loop: true" geometry="mergeTo:null; primitive:circle; radius:3.0;">
       </a-video>
-      <!-- <a-video
-         material="shader:flat; side:double; transparent:true;"
-         >
-      </a-video> -->
-
-
       <!-- Obj model -->
       <!-- r2d2 -->
       <a-obj-model src="#r2d2-obj" mtl="#r2d2-mtl" position="6 0 -1" scale="0.02 0.02 -0.02" rotation="0 90 0"
@@ -85,14 +79,14 @@
       </a-obj-model>
       <!-- space girl -->
       <a-obj-model src="#spaceGirl-obj" mtl="#spaceGirl-mtl" position="10 0 10" scale="3 3 3" rotation="0 220 0"
-      animation__position="property: position; to: 11 1 10; dir: alternate; dur: 3000;loop: true; startEvents:click"
-      animation__rotation="property: rotation; to: 5 225 -5; dir: reverse; dur: 3000;loop: true; startEvents:click"
-      >
+      animation__position="property: position; to: 11 30 10; dir: alternate; dur: 3000;loop: false; startEvents:click"
+      animation__rotation="property: rotation; to: 5 225 -5; dir: reverse; dur: 3000;loop: true; startEvents:click">
       </a-obj-model>
-
-
     </a-scene>
   </body>
-  <script> window.addEventListener('click', function () {  var v = document.querySelector('#video');  v.play(); }); </script>
-
+  <script> window.addEventListener('click', function () {
+    var v = document.querySelector('#video');
+    v.play();
+    });
+  </script>
 </html>
