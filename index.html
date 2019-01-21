@@ -56,8 +56,8 @@
       animation ="property: position; to: 0 10 220; dir: alternate; dur: 3000; loop: true">
       </a-torus-knot>
       <!-- star shooters -->
-      <a-cone src="#yellow-star" radius="2" position="-4 0 9"  particle-system="preset: default; color:#cc9c37; particleCount: 500" > </a-cone>
-      <a-cone src="#red-star" radius="2" position="4 0 9"  particle-system="preset: default; color:#d32802; particleCount: 500" ></a-cone>
+      <a-cone src="#yellow-star" radius="2" position="-4 0 9"  particle-system="preset: default; color:#cc9c37; particleCount: 100" > </a-cone>
+      <a-cone src="#red-star" radius="2" position="4 0 9"  particle-system="preset: default; color:#d32802; particleCount: 100" ></a-cone>
       <!-- video entities with animation -->
       <a-video  src="#video" position="0 2 20"
       animation ="property: position; to: 0 3 30; dir: alternate; dur: 3000; loop: true" geometry="mergeTo:null; primitive:circle; radius:3.0;">
@@ -74,8 +74,8 @@
       </a-obj-model>
       <!-- robot -->
       <a-obj-model gltf-model="#final-robot-w-moves-gltf" scale="0.02 0.02 -0.02" position="0 0 -10" rotation="0 180 0"
-      animation__position="property:position; to: -6 0 15; dir: alternate; dur: 5000; startEvents:click; loop:false"
-      animation__rotation="property:rotation; to: 0 0 0; fir: alternate: dur:5000; startEvents:click; loop:false">
+      animation__position="property:position; to: -8 0 10; dir: alternate; dur: 5000; startEvents:click; loop:false"
+      animation__rotation="property:rotation; to: 0 360 0; fir: alternate: dur:5000; startEvents:click; loop:false">
       </a-obj-model>
       <!-- space girl -->
       <a-obj-model src="#spaceGirl-obj" mtl="#spaceGirl-mtl" position="10 0 10" scale="3 3 3" rotation="0 220 0"
