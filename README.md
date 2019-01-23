@@ -19,11 +19,11 @@ Headset: Click the headset icon on the bottom right. To navigate the scene, move
 
 # Screenshots
 ![Alt text](/assets/images/spaceVIPPage.png "Opening View")
-<<<<<<< HEAD
+
 
 
 =======
 ![Alt text](/assets/images/spaceVIPMoon.png "3D Moon")
->>>>>>> refs/remotes/origin/master
+
 
 
