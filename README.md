@@ -1,5 +1,5 @@
 # SpaceVIP : A VR Experience On The Moon
-> Fullstack Academy Stackathon Project
+> Fullstack Academy Stackathon Project **Won People's Choice Award**
 
 # The Challenge
 To select a "stack" to learn and use to build a project in 5 days.
