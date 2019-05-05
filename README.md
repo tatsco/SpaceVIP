@@ -2,7 +2,7 @@
 > Fullstack Academy Stackathon Project **Won People's Choice Award**
 
 # The Challenge
-To select a "stack" to learn and use to build a project in 5 days.
+To select a "stack" to learn and use to build a project in 3 days.
 
 # Framework
 I selected A-Frame, a WebVR Framework for designing Virtual Reality experiences, using primarily HTML and Javascript.
